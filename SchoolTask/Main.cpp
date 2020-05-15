@@ -9,6 +9,25 @@ void TestOne  ();
 void TestTwo  ();
 void TestThree();
 
+void Add_Item(Stack& a, double value) {
+	a.Add_Item(value);
+}
+
+void Add_Two_Items(Stack& a, double first, double second) {
+	a.Add_Two_Items(first, second);
+}
+
+void Extract_Item(Stack& a) {
+	a.Extract_Item();
+}
+
+RealNumber* Sum(RealNumber* a, RealNumber* b) {
+	return new RealNumber(a->value + b->value);
+}
+RealNumber* Multiply(RealNumber* a, RealNumber* b) {
+	return new RealNumber(a->value * b->value);
+}
+
 int main()
 {
 	setlocale(LC_ALL, "Russian");

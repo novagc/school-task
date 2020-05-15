@@ -11,6 +11,10 @@ private:
     RealNumber* head;
 
 public:
+    friend void Add_Item(Stack &a, double value);
+    friend void Add_Two_Items(Stack& a, double first, double second);
+    friend void Extract_Item(Stack& a);
+
     Stack ();
     Stack (Stack& stack);
 
