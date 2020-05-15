@@ -1,28 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
-#define ll long long
-
-#include <stdio.h>
-#include <limits.h>
-
-#include <algorithm>
-#include <iterator>
 #include <iostream>
-#include <sstream>
-#include <fstream>
-#include <cstdlib>
-#include <cstring>
-#include <cassert>
-#include <string>
-#include <vector>
-#include <cstdio>
-#include <deque>
-#include <queue>
-#include <stack>
-#include <ctime>
-#include <cmath>
-#include <regex>
-#include <map>
-#include <set>
 
 #include "RealNumber.h"
 #include "Stack.h"
