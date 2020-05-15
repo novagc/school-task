@@ -12,10 +12,10 @@ public:
 
 	~RealNumber();
 
-	RealNumber Sum         (RealNumber& b);
-	RealNumber Subtraction (RealNumber& b);
-	RealNumber Divide      (RealNumber& b);
-	RealNumber Multiply    (RealNumber& b);
+	RealNumber* Sum         (RealNumber& b);
+	RealNumber* Subtraction (RealNumber& b);
+	RealNumber* Divide      (RealNumber& b);
+	RealNumber* Multiply    (RealNumber& b);
 	
 	void Assing (RealNumber& b);
 
