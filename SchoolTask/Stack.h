@@ -8,11 +8,11 @@ struct Stack
 {
 private:
     long long count;
-    RealNumber* first;
+    RealNumber* head;
 
 public:
     Stack ();
-    Stack (Stack* stack);
+    Stack (Stack& stack);
 
     ~Stack ();
 
