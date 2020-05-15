@@ -16,8 +16,11 @@ public:
 
     ~Stack ();
 
-    void Add_Item      (double value);
+    void Add_Item (double value);
+    void Add_Item (RealNumber* num);
+
     void Add_Two_Items (double first, double second);
+    void Add_Two_Items (RealNumber* first, RealNumber* second);
 
     void Extract_Item      ();
     void Extract_Two_Items ();

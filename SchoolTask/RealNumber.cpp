@@ -10,13 +10,13 @@ RN::RealNumber() {
 }
 
 RN::RealNumber(double num) {
-	value = 0;
+	value = num;
 	next = NULL;
 }
 
-RN::RealNumber(RealNumber& num) {
-	value = num.Value();
-	next = num.Next();
+RN::RealNumber(RealNumber* num) {
+	value = num->Value();
+	next = num->Next();
 }
 
 RN::~RealNumber() {
@@ -24,28 +24,28 @@ RN::~RealNumber() {
 	next = NULL;
 }
 
-RealNumber* RN::Sum(RealNumber& b) {
-	return new RealNumber(value + b.Value());
+RealNumber* RN::Sum(RealNumber* b) {
+	return new RealNumber(value + b->Value());
 }
 
-RealNumber* RN::Subtraction(RealNumber& b) {
-	return new RealNumber(value - b.Value());
+RealNumber* RN::Subtraction(RealNumber* b) {
+	return new RealNumber(value - b->Value());
 }
-RealNumber* RN::Divide(RealNumber& b) {
-	return new RealNumber(value / b.Value());
+RealNumber* RN::Divide(RealNumber* b) {
+	return new RealNumber(value / b->Value());
 }
-RealNumber* RN::Multiply(RealNumber& b) {
-	return new RealNumber(value * b.Value());
+RealNumber* RN::Multiply(RealNumber* b) {
+	return new RealNumber(value * b->Value());
 }
 
-void RN::Assing(RealNumber& b) {
-	value = b.Value();
+void RN::Assing(RealNumber* b) {
+	value = b->Value();
 }
 
 void RN::SetNext(RealNumber* b) {
 	next = b;
 }
-void RN::SetValue(double& num) {
+void RN::SetValue(double num) {
 	value = num;
 }
 

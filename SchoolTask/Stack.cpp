@@ -21,16 +21,23 @@ St::~Stack() {
 	delete head;
 }
 
-void St::Add_Item(double value) {
-	RealNumber* temp = new RealNumber(value);
-
-	temp->SetNext(head->Next());
-	head->SetNext(temp);
+void St::Add_Item(RealNumber* num) {
+	num->SetNext(head->Next());
+	head->SetNext(num);
 
 	count++;
 }
 
+void St::Add_Item(double value) {
+	Add_Item(new RealNumber(value));
+}
+
 void St::Add_Two_Items(double first, double second) {
+	Add_Item(first);
+	Add_Item(second);
+}
+
+void St::Add_Two_Items(RealNumber* first, RealNumber* second) {
 	Add_Item(first);
 	Add_Item(second);
 }
